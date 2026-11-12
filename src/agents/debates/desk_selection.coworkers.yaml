@@ -1,0 +1,18 @@
+
+
+Topic: "There are two desks available in the office. One is in the corner and the other is in the middle of the room. The corner desk is larger and has a window. The middle desk is smaller and does not have a window. The corner desk is more expensive, but the middle desk is more convenient. People are debating which person should get the corner desk and which person should get the middle desk."
+
+Agents:
+  Worker1: ManagerAgent
+  Worker2: EmployeeAgent
+
+Judge:
+  name: Judge
+  persona: BiasedJudgeAgent
+  biased_towards: Worker1 # Use "random", a worker name, or null for an objective judge.
+
+Debate_Rounds: 3
+
+transcript:
+  enabled: true
+  path: "transcripts/desk_selection.coworkers.jsonl"

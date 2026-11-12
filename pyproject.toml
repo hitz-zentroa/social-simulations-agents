@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "social-debate-agents"
+version = "0.1.0"
+description = "Round-based social debates orchestrated with Microsoft Agent Framework"
+requires-python = ">=3.10"
+dependencies = [
+    "agent-framework-openai>=1.0.0",
+    "loguru>=0.7.0",
+    "PyYAML>=6.0",
+    "python-dotenv>=1.0.0",
+    "streamlit>=1.40.0",
+]
+
+[project.scripts]
+social-debate = "agents.debate:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
